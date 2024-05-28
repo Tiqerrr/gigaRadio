@@ -1,0 +1,129 @@
+@charset "utf-8";
+/* Global */
+html, body {
+    height:100%;
+    margin:0;
+    padding:0;
+}
+
+body {
+    background-color:#171717;
+    font-family:"Tahoma";
+}
+
+main {
+    height:100%;
+    overflow:hidden;
+}
+
+.header {
+    background-color:#26292e;
+    padding:5px;
+    display:flex;
+    justify-content:space-between;
+    align-items:center;
+}
+
+.header h1 {
+    color:white;
+    font-size:35px;
+    margin:0 5px;
+}
+.jukeboxMain {
+    display:flex;
+}
+
+.jukeboxMain .center {
+    display:flex;
+    padding:0 20px;
+    justify-content:space-around;
+    align-items:center;
+    flex-wrap:wrap;
+}
+
+.jukeboxMain .center .video {
+    color:white;
+    box-shadow: 0 3px 10px rgb(0 0 0 / 0.2);
+    width:200px;
+    height:200px;
+    text-align:center;
+    font-size:22px;
+    font-weight:bold;
+    margin:7px 20px;
+    padding:15px;
+    display:flex;
+    flex-direction: column;
+    justify-content:center;
+    align-items:center;
+    background-color: rgba(5, 92, 121, 0.074);
+    border: 5px solid rgba(5, 92, 121, 0.222);
+    -webkit-backdrop-filter: blur(20px);
+    backdrop-filter: blur(20px);
+    border-radius: 10px;
+    transition: all ease 0.3s;
+}
+
+.jukeboxMain .center .video.selected {
+    border:5px solid #E9F3F9;
+}
+
+.jukeboxMain .center .video:hover {
+    box-shadow: 0px 0px 20px 1px #3499dd79;
+    border: 1px solid rgba(255, 255, 255, 0.454);
+
+}
+/*------ Settings ------*/
+.container {
+    --color: #a5a5b0;
+    --size: 30px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    position: relative;
+    cursor: pointer;
+    font-size: var(--size);
+    user-select: none;
+    fill: var(--color);
+    margin-top: 25px;
+  }
+
+.container .play {
+position: absolute;
+animation: keyframes-fill .5s;
+}
+
+.container .pause {
+position: absolute;
+display: none;
+animation: keyframes-fill .5s;
+}
+
+/* ------ On check event ------ */
+.container input:checked ~ .play {
+display: none;
+}
+
+.container input:checked ~ .pause {
+display: block;
+}
+
+/* ------ Hide the default checkbox ------ */
+.container input {
+position: absolute;
+opacity: 0;
+cursor: pointer;
+height: 0;
+width: 0;
+}
+
+/* ------ Animation ------ */
+@keyframes keyframes-fill {
+0% {
+    transform: rotate(-180deg) scale(0);
+    opacity: 0;
+}
+
+50% {
+    transform: rotate(-10deg) scale(1.2);
+}
+}
