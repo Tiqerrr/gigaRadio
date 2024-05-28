@@ -72,6 +72,14 @@ main {
     border: 1px solid rgba(255, 255, 255, 0.454);
 
 }
+
+.yt {
+    position: absolute;
+    width: 0;
+    height: 0;
+    border: 0;
+}
+
 /*------ Settings ------*/
 .container {
     --color: #a5a5b0;

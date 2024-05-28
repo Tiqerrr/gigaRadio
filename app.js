@@ -29,7 +29,17 @@ function playSong(id) {
                 document.getElementById(id).setAttribute("data-playing", "false")
                 return;
             }
-
+            case "song3":
+                if (document.getElementById(id).getAttribute("data-playing") == "false") {
+                    document.getElementById("wii").setAttribute("src", "https://www.youtube.com/embed/bPkNXF9NJcs?autoplay=1")
+                    document.getElementById(id).setAttribute("data-playing", "true")
+                    return;
+                    
+                }else {
+                    document.getElementById("wii").setAttribute("src", "https://www.youtube.com/embed/bPkNXF9NJcs")
+                    document.getElementById(id).setAttribute("data-playing", "false")
+                    return;
+                }
 
 
             return;
