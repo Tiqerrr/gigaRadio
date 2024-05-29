@@ -12,7 +12,7 @@ function playSong(id) {
                 audio.pause();
                 audio.currentTime = 0;
                 buttonID.setAttribute("data-playing", "false")
-                containerID.removeAttribute("selected")
+                containerID.setAttribute("selected", "false")
                 return;
                 
             }else if (buttonID.getAttribute("data-playing") == "false") {
@@ -25,29 +25,29 @@ function playSong(id) {
 //Lofi YT
         case "song2":
             if (buttonID.getAttribute("data-playing") == "false") {
-                document.getElementById("lofi").setAttribute("src", "https://www.youtube.com/embed/jfKfPfyJRdk?autoplay=1")
                 buttonID.setAttribute("data-playing", "true")
                 containerID.setAttribute("selected", "true")
+                document.getElementById("lofi").setAttribute("src", "https://www.youtube.com/embed/jfKfPfyJRdk?autoplay=1")
                 return;
                 
-            }else {
-                document.getElementById("lofi").setAttribute("src", "https://www.youtube.com/embed/jfKfPfyJRdk")
+            }else if (buttonID.getAttribute("data-playing") == "true") {
                 buttonID.setAttribute("data-playing", "false")
-                containerID.removetAttribute("selected")
+                containerID.setAttribute("selected", "false")
+                document.getElementById("lofi").setAttribute("src", "https://www.youtube.com/embed/jfKfPfyJRdk")
                 return;
             }
 //Wii Shop YT
         case "song3":
             if (buttonID.getAttribute("data-playing") == "false") {
-                document.getElementById("wii").setAttribute("src", "https://www.youtube.com/embed/bPkNXF9NJcs?autoplay=1")
                 buttonID.setAttribute("data-playing", "true")
                 containerID.setAttribute("selected", "true")
+                document.getElementById("wii").setAttribute("src", "https://www.youtube.com/embed/bPkNXF9NJcs?autoplay=1")
                 return;
                 
-            }else {
-                document.getElementById("wii").setAttribute("src", "https://www.youtube.com/embed/bPkNXF9NJcs")
+            }else if (buttonID.getAttribute("data-playing") == "true") {
                 buttonID.setAttribute("data-playing", "false")
-                containerID.removetAttribute("selected")
+                containerID.setAttribute("selected", "false")
+                document.getElementById("wii").setAttribute("src", "https://www.youtube.com/embed/bPkNXF9NJcs")
                 return;
             }
     }
