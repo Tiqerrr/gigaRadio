@@ -69,11 +69,11 @@ main {
     border: 1px solid rgba(255, 255, 255, 0.454);
 }
 
-.jukeboxMain .center .video:hover {
+/* .jukeboxMain .center .video:hover {
     box-shadow: 0px 0px 20px 1px #ddb63479;
     border: 1px solid rgba(255, 255, 255, 0.454);
 
-}
+} */
 
 .yt {
     position: absolute;
