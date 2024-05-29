@@ -63,12 +63,14 @@ main {
     transition: all ease 0.3s;
 }
 
-.jukeboxMain .center .video.selected {
+.jukeboxMain .center .video[selected="true"] {
     border:5px solid #E9F3F9;
+    box-shadow: 0px 0px 20px 1px #3499dd79;
+    border: 1px solid rgba(255, 255, 255, 0.454);
 }
 
 .jukeboxMain .center .video:hover {
-    box-shadow: 0px 0px 20px 1px #3499dd79;
+    box-shadow: 0px 0px 20px 1px #ddb63479;
     border: 1px solid rgba(255, 255, 255, 0.454);
 
 }
