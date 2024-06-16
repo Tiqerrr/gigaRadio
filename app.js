@@ -13,7 +13,6 @@ function playSong(id) {
             if (buttonID.getAttribute("data-playing") == "true") {
                 console.log("Stopping audio...")
                 audio1.pause();
-                audio1.currentTime = 0;
                 buttonID.setAttribute("data-playing", "false")
                 containerID.setAttribute("selected", "false")
                 return;
@@ -25,18 +24,20 @@ function playSong(id) {
                 containerID.setAttribute("selected", "true")
                 return;
             }
-//Lofi YT
+//Hit 94fm
         case "song2":
-            if (buttonID.getAttribute("data-playing") == "false") {
-                buttonID.setAttribute("data-playing", "true")
-                containerID.setAttribute("selected", "true")
-                document.getElementById("lofi").setAttribute("src", "https://www.youtube.com/embed/jfKfPfyJRdk?autoplay=1")
-                return;
-                
-            }else if (buttonID.getAttribute("data-playing") == "true") {
+            if (buttonID.getAttribute("data-playing") == "true") {
+                console.log("Stopping audio...")
+                audio4.pause();
                 buttonID.setAttribute("data-playing", "false")
                 containerID.setAttribute("selected", "false")
-                document.getElementById("lofi").setAttribute("src", "https://www.youtube.com/embed/jfKfPfyJRdk")
+                return;
+                
+            }else if (buttonID.getAttribute("data-playing") == "false") {
+                console.log("Playing audio...")
+                audio4.play()
+                buttonID.setAttribute("data-playing", "true")
+                containerID.setAttribute("selected", "true")
                 return;
             }
 //Wii Shop YT
@@ -53,22 +54,37 @@ function playSong(id) {
                 document.getElementById("wii").setAttribute("src", "https://www.youtube.com/embed/bPkNXF9NJcs")
                 return;
             }
+// Lofi YT
         case "song4":
-            if (buttonID.getAttribute("data-playing") == "true") {
-                console.log("Stopping audio...")
-                audio4.pause();
-                audio4.currentTime = 0;
-                buttonID.setAttribute("data-playing", "false")
-                containerID.setAttribute("selected", "false")
-                return;
-                
-            }else if (buttonID.getAttribute("data-playing") == "false") {
-                console.log("Playing audio...")
-                audio4.play()
+
+            if (buttonID.getAttribute("data-playing") == "false") {
                 buttonID.setAttribute("data-playing", "true")
                 containerID.setAttribute("selected", "true")
+                document.getElementById("lofi").setAttribute("src", "https://www.youtube.com/embed/jfKfPfyJRdk?autoplay=1")
+                return;
+                
+            }else if (buttonID.getAttribute("data-playing") == "true") {
+                buttonID.setAttribute("data-playing", "false")
+                containerID.setAttribute("selected", "false")
+                document.getElementById("lofi").setAttribute("src", "https://www.youtube.com/embed/jfKfPfyJRdk")
                 return;
             }
+//Traverse Town YT
+        case "song5":
+
+            if (buttonID.getAttribute("data-playing") == "false") {
+                buttonID.setAttribute("data-playing", "true")
+                containerID.setAttribute("selected", "true")
+                document.getElementById("lofi").setAttribute("src", "https://www.youtube.com/embed/BZe7cC_xDio?autoplay=1")
+            return;
+
+            }else if (buttonID.getAttribute("data-playing") == "true") {
+                buttonID.setAttribute("data-playing", "false")
+                containerID.setAttribute("selected", "false")
+                document.getElementById("lofi").setAttribute("src", "https://www.youtube.com/embed/BZe7cC_xDio")
+            return;
+            }
+
 
     }
 }
