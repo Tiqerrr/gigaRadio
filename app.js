@@ -76,13 +76,13 @@ function playSong(id) {
             if (buttonID.getAttribute("data-playing") == "false") {
                 buttonID.setAttribute("data-playing", "true")
                 containerID.setAttribute("selected", "true")
-                document.getElementById("lofi").setAttribute("src", "https://www.youtube.com/embed/BZe7cC_xDio?autoplay=1")
+                document.getElementById("traverse").setAttribute("src", "https://www.youtube.com/embed/BZe7cC_xDio?autoplay=1")
             return;
 
             }else if (buttonID.getAttribute("data-playing") == "true") {
                 buttonID.setAttribute("data-playing", "false")
                 containerID.setAttribute("selected", "false")
-                document.getElementById("lofi").setAttribute("src", "https://www.youtube.com/embed/BZe7cC_xDio")
+                document.getElementById("traverse").setAttribute("src", "https://www.youtube.com/embed/BZe7cC_xDio")
             return;
             }
 //100.9 Coast Country
